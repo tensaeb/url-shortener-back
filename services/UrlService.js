@@ -9,7 +9,7 @@ exports.createUrl = async (url) => {
 };
 
 exports.getUrlById = async (id) => {
-  return await ShortUrl.findById(id);
+  return await ShortUrl.findOne({ code: id });
 };
 
 exports.updateUrl = async (id, url) => {
